@@ -2,7 +2,7 @@
 
 LRPA - Laravel ReactJS Passport Authentication \
 This project is Frontend part.\
-Backend part - [here](https://github.com/vichetmoeng/LRPA-laravel-backend-api).
+Backend part - [LRPA-laravel-backend-api](https://github.com/vichetmoeng/LRPA-laravel-backend-api).
 
 # Getting Started with Create React App
 
