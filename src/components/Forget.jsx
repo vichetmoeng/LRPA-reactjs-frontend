@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
 
 class Forget extends Component {
   state = {
@@ -47,6 +47,10 @@ class Forget extends Component {
       </div>
       )
     }
+
+    if(localStorage.getItem('token')) {
+        return <Redirect to={'/profile'} />
+      }
 
     return (
       <div className="container h-100 pt-5">

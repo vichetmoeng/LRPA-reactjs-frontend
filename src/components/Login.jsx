@@ -60,6 +60,10 @@ class Login extends Component {
       )
     }
 
+    if(localStorage.getItem('token')) {
+        return <Redirect to={'/profile'} />
+      }
+
     return (
       <div className="container h-100 pt-5">
         <div className="row h-100 justify-content-center align-items-center">

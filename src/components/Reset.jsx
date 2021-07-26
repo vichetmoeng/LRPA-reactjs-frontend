@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { Component } from "react";
+import { Redirect } from "react-router";
 
 class Reset extends Component {
   state = {
@@ -55,6 +56,11 @@ class Reset extends Component {
         </div>
       );
     }
+
+    if(localStorage.getItem('token')) {
+        return <Redirect to={'/profile'} />
+      }
+
     return (
       <div className="container h-100 pt-5">
         <div className="row h-100 justify-content-center align-items-center">
