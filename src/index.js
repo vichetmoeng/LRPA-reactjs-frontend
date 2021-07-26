@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Header from './common/Header';
 import reportWebVitals from './reportWebVitals';
+import axios from 'axios';
+
+// set domain for api server
+axios.defaults.baseURL = 'http://192.168.43.166:8000/api';
+axios.defaults.headers.common['Authorization']='Bearer ' + localStorage.getItem('token');
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Header />
   </React.StrictMode>,
   document.getElementById('root')
 );
