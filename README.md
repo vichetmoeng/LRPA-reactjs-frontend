@@ -1,3 +1,9 @@
+# LRPA-reactjs-frontend
+
+LRPA - Laravel ReactJS Passport Authentication \
+This project is Frontend part.\
+Backend part - [here](https://github.com/vichetmoeng/LRPA-laravel-backend-api).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
