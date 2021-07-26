@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link, NavLink } from "react-router-dom";
 
 class Nav extends Component {
 
@@ -20,9 +20,9 @@ class Nav extends Component {
         <div>
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <Link className="nav-link" to="/" onClick={this.logout}>
+              <NavLink className="nav-link text-light" to="/" onClick={this.logout}>
                 Logout
-              </Link>
+              </NavLink>
             </li>
           </ul>
           
@@ -30,9 +30,9 @@ class Nav extends Component {
       );
       profile = (
         <li className="nav-item">
-          <Link className="nav-link" to="/profile">
+          <NavLink className="nav-link" activeClassName="active" to="/profile">
             Profile
-          </Link>
+          </NavLink>
         </li>
       );
     } else {
@@ -40,15 +40,15 @@ class Nav extends Component {
         <div>
           <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
-                  <Link className="nav-link" to="/login">
+                  <NavLink className="nav-link" to="/login">
                     Login
-                  </Link>
+                  </NavLink>
                 </li>
 
                 <li className="nav-item">
-                  <Link className="nav-link" to="/register">
+                  <NavLink className="nav-link" to="/register">
                     Register
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
         </div>
@@ -58,13 +58,13 @@ class Nav extends Component {
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-success">
-          <Link
+          <NavLink
             className="navbar-brand"
             to="/"
             title="Laravel ReactJS Passport Authentication"
           >
             <h1>LRPA</h1>
-          </Link>
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -78,10 +78,10 @@ class Nav extends Component {
           </button>
           <div className="collapse navbar-collapse" id="navbarText">
             <ul className="navbar-nav mr-auto">
-              <li className="nav-item active">
-                <Link className="nav-link" to="/">
-                  Home <span className="sr-only">(current)</span>
-                </Link>
+              <li className="nav-item">
+                <NavLink className="nav-link" activeClassName="active"  to="/">
+                  Home
+                </NavLink>
               </li>
 
               <li className="nav-item">
